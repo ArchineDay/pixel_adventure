@@ -1,0 +1,10 @@
+{
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "Dart-Code.flutter",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}
