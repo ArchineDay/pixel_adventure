@@ -3,10 +3,12 @@ import 'dart:ui';
 
 import 'package:flame/camera.dart';
 import 'package:flame/components.dart';
+import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:pixel_adventure/levels/level.dart';
 
-class PixelAdventure extends FlameGame<Level> {
+class PixelAdventure extends FlameGame<Level>
+    with HasKeyboardHandlerComponents {
   PixelAdventure()
       : super(
             camera: CameraComponent.withFixedResolution(
