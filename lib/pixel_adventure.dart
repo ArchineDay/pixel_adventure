@@ -16,7 +16,7 @@ class PixelAdventure extends FlameGame
   late JoystickComponent joystick;
   Player player = Player(character: 'Ninja Frog');
 
-  bool showJoystick = false;
+  bool showJoystick = true;
 
   @override
   FutureOr<void> onLoad() async {
@@ -58,17 +58,17 @@ class PixelAdventure extends FlameGame
       case JoystickDirection.left:
       case JoystickDirection.upLeft:
       case JoystickDirection.downLeft:
-        player.playerDirection = PlayerDirection.left;
+        player.horizontalMovement = -1;
         break;
       case JoystickDirection.right:
       case JoystickDirection.upRight:
       case JoystickDirection.downRight:
-        player.playerDirection = PlayerDirection.right;
+        player.horizontalMovement = 1;
         break;
 
       default:
         //idle
-        player.playerDirection = PlayerDirection.none;
+        player.horizontalMovement = 0;
         break;
     }
   }
