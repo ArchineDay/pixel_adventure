@@ -16,11 +16,11 @@ class PixelAdventure extends FlameGame
   late JoystickComponent joystick;
   Player player = Player(character: 'Ninja Frog');
 
-  bool showJoystick = true;
+  bool showJoystick = false;
 
   @override
   FutureOr<void> onLoad() async {
-    world = Level(player: player, levelName: 'level-02');
+    world = Level(player: player, levelName: 'level-01');
     camera = CameraComponent.withFixedResolution(
       width: 640,
       height: 360,
